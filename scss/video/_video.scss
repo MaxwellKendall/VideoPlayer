@@ -1,0 +1,22 @@
+
+
+//Contains elements direct at the video element
+
+    .video {
+        width: 50%;
+        margin: auto;
+        padding: 0 25%;
+
+        #controls {
+
+        }
+        .button {
+        //code for each button on video control
+        @extend %button;
+
+        }
+
+        .play {
+
+        }
+    }

@@ -1,0 +1,37 @@
+.video .button {
+  width: 4em;
+  height: 3.5em;
+  border: 1px solid black; }
+
+/*
+
+
+    %basic-layout {
+        margin: auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    %basic-text-style {
+        font-family: $font;
+        text-decoration: none;
+        text-align: center;
+        list-style: none;
+
+    }
+
+*/
+body h1,
+body h2 {
+  text-align: center; }
+  body h1 p,
+  body h2 p {
+    text-align: left;
+    font-size: 15px; }
+
+.video {
+  width: 50%;
+  margin: auto;
+  padding: 0 25%; }
+
+/*# sourceMappingURL=main.css.map */

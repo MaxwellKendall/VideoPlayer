@@ -1,0 +1,17 @@
+
+    body {
+
+    //code for body of site
+
+        h1,
+        h2 {
+            // nested inside the body
+            text-align: center;
+
+            p {
+                // nested inside the h1,2 and body
+                text-align: left;
+                font-size: 15px;
+                }
+            }
+        }
