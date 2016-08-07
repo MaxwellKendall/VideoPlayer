@@ -1,7 +1,11 @@
-.video .button {
-  width: 4em;
-  height: 3.5em;
-  border: 1px solid black; }
+#controls .button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  align-self: center;
+  margin: 0 1em;
+  cursor: pointer;
+  padding: 0 .75em; }
 
 /*
 
@@ -21,17 +25,24 @@
     }
 
 */
-body h1,
-body h2 {
-  text-align: center; }
-  body h1 p,
-  body h2 p {
-    text-align: left;
-    font-size: 15px; }
+.wrapper p {
+  text-align: left;
+  font-size: 15px; }
 
 .video {
-  width: 50%;
-  margin: auto;
-  padding: 0 25%; }
+  width: 100%;
+  padding: 2px; }
+
+#controls {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -50px; }
+  #controls .play {
+    background: url(../icons/play-icon.png) black no-repeat; }
+  #controls .fullScreen {
+    background: url(../icons/fullscreen-icon.png) black no-repeat; }
+  #controls .volume {
+    background: url(../icons/volume-on-icon.png) black no-repeat; }
 
 /*# sourceMappingURL=main.css.map */
