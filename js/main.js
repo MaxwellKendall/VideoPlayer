@@ -1,15 +1,14 @@
-//When buttons are clicked, do the video method that corresponds with the button
-
-// var buttons =
-// var playButton =
-// var volumeButton = buttons[1];
-// var fullScreenButton = buttons[2];
-
-// object literal with a bunch of stuff in it
+//When buttons are clicked, do the video method that correspon
 
 var buttons = {
-    //list: document.getElementsByTagName("button"),
-    playButton: buttons.list[0],
-    volumeButton: buttons.list[1],
-    fullScreenButton: buttons.list[2]
+    play: document.getElementById("play"),
+    volume: document.getElementById("volume"),
+    fScreen: document.getElementById("fscreen")
 };
+function xyz(){
+    console.log('x');
+    // create one function for each button
+}
+buttons.play.addEventListener("click", xyz, false)
+buttons.volume.addEventListener("click", xyz, false)
+buttons.fScreen.addEventListener("click", xyz, false)
