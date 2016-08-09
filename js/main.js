@@ -50,7 +50,7 @@
         // a. OBJECT:
 
             var video = {
-                element: document.getElementsByTagName("video")
+                element: document.getElementsByTagName("video")[0]
             };
 
         // b. FUNCTIONS:
