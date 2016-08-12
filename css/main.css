@@ -39,10 +39,17 @@
   position: relative;
   top: -50px; }
   #controls .play {
-    background: url(../icons/play-icon.png) black no-repeat; }
+    background: url(../icons/play-icon.png) black no-repeat center; }
   #controls .fullScreen {
-    background: url(../icons/fullscreen-icon.png) black no-repeat; }
+    background: url(../icons/fullscreen-icon.png) black no-repeat center; }
   #controls .volume {
-    background: url(../icons/volume-on-icon.png) black no-repeat; }
+    background: url(../icons/volume-on-icon.png) black no-repeat center; }
+  #controls #videotrack {
+    width: 100%;
+    background: white;
+    border-radius: 25px; }
+  #controls #progressBar {
+    width: 0%;
+    background: orange; }
 
 /*# sourceMappingURL=main.css.map */
