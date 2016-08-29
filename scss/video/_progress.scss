@@ -1,0 +1,30 @@
+#progressBarContainer {
+    height: .25em;
+    display: flex;
+    justify-content: flex-start;
+    width: 99%;
+    align-self: center;
+    // background: #f5f5f5;
+    margin: auto;
+    cursor: pointer;
+    position: relative;
+    bottom: 19px;
+    @include media-query($tablet) {
+        position: relative;
+    }
+}
+    #xyz:hover {
+        #progressBarContainer {
+            @include media-query($tablet) {
+            bottom: 43px;
+            }
+        }
+    }
+
+    #progressBar {
+        width: 0%;
+        background: orange;
+        margin: 0;
+        height: .25em;
+        opacity: .9
+    }

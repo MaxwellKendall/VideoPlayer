@@ -1,29 +1,21 @@
-%button {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
-    align-self: center;
-    margin: 0 1em;
-    cursor: pointer;
-    padding: 0 .75em;
-}
 
 
-/*
-
-
-    %basic-layout {
-        margin: auto;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    %basic-text-style {
-        font-family: $font;
-        text-decoration: none;
-        text-align: center;
-        list-style: none;
-
-    }
-
-*/
+        %button {
+            width: 35px;
+            height: 30px;
+            border: 1px solid black;
+            align-self: center;
+            cursor: pointer;
+            padding: 0 .5em;
+            margin: 0 .25em;
+            opacity: .5;
+            // border-radius:
+        }
+            %text-style {
+                font-family: 'Merriweather', serif;
+                text-align: left;
+            }
+        %phone-size {
+            width: 15px;
+            height: 15px;
+        }

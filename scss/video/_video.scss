@@ -4,51 +4,6 @@
 
     .video {
         width: 100%;
-        padding: 2px;
-    }
-
-    #controls {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        top: -50px;
-
-            .button {
-            //code for each button on video control
-            @extend %button;
-
-            }
-
-            .play {
-                //will change programatically to the pause-icon
-                background: url(../icons/play-icon.png) black no-repeat center;
-            }
-
-            .fullScreen {
-                background: url(../icons/fullscreen-icon.png) black no-repeat center;
-            }
-
-            .volume {
-                //will change programatically to the volume-on-icon
-                background: url(../icons/volume-on-icon.png) black no-repeat center;
-
-            }
-            .currentTime {
-                //display the current time of the video...
-
-            }
-
-            #videotrack {
-                width: 100%;
-                background: white;
-                border-radius: 25px;
-            }
-
-            #progressBar {
-                width: 0%;
-                background: orange;
-            }
-
     }
 
     // .video:hover {

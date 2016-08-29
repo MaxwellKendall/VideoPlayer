@@ -1,55 +1,105 @@
-#controls .button {
-  width: 30px;
+#controls button {
+  width: 35px;
   height: 30px;
   border: 1px solid black;
   align-self: center;
-  margin: 0 1em;
   cursor: pointer;
-  padding: 0 .75em; }
+  padding: 0 .5em;
+  margin: 0 .25em;
+  opacity: .5; }
 
-/*
+* {
+  font-family: 'Merriweather', serif;
+  text-align: left; }
 
-
-    %basic-layout {
-        margin: auto;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    %basic-text-style {
-        font-family: $font;
-        text-decoration: none;
-        text-align: center;
-        list-style: none;
-
-    }
-
-*/
-.wrapper p {
-  text-align: left;
-  font-size: 15px; }
+* p {
+  font-size: 12px; }
+* h1 {
+  font-size: 36px; }
+* h2 {
+  font-size: 24px; }
+* h3 {
+  font-size: 18px; }
+* .wrapper {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  * .wrapper p {
+    margin: 0; }
 
 .video {
-  width: 100%;
-  padding: 2px; }
+  width: 100%; }
 
 #controls {
+  padding-left: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
-  top: -50px; }
-  #controls .play {
-    background: url(../icons/play-icon.png) black no-repeat center; }
-  #controls .fullScreen {
+  position: relative; }
+  @media (min-width: 768px) {
+    #controls {
+      bottom: 34px; } }
+  @media (min-width: 1024px) {
+    #controls {
+      bottom: 39px; } }
+  @media (min-width: 768px) {
+    #controls button {
+      width: 25px;
+      height: 25px;
+      bottom: 39px;
+      justify-content: center; } }
+  @media (min-width: 1024px) {
+    #controls button {
+      width: 30px;
+      height: 30px; } }
+  #controls .time {
+    margin-right: auto;
+    width: 200px; }
+  #controls #play {
+    background: url(../icons/play-icon.png) black no-repeat center;
+    margin: 0 1em 0 0; }
+  #controls #fScreen {
     background: url(../icons/fullscreen-icon.png) black no-repeat center; }
+    @media (min-width: 768px) {
+      #controls #fScreen {
+        margin-right: 0; } }
   #controls .volume {
-    background: url(../icons/volume-on-icon.png) black no-repeat center; }
-  #controls #videotrack {
-    width: 100%;
-    background: white;
-    border-radius: 25px; }
-  #controls #progressBar {
-    width: 0%;
-    background: orange; }
+    position: relative; }
+    #controls .volume #volume {
+      background: url(../icons/volume-on-icon.png) black no-repeat center; }
+    #controls .volume #volumeAdjust {
+      width: 50%; }
+  #controls .time {
+    margin-right: auto; }
+    @media (min-width: 768px) {
+      #controls .time #videoDuration {
+        margin-right: auto; } }
+
+#progressBarContainer {
+  height: .25em;
+  display: flex;
+  justify-content: flex-start;
+  width: 99%;
+  align-self: center;
+  margin: auto;
+  cursor: pointer;
+  position: relative;
+  bottom: 19px; }
+  @media (min-width: 768px) {
+    #progressBarContainer {
+      position: relative; } }
+
+@media (min-width: 768px) {
+  #xyz:hover #progressBarContainer {
+    bottom: 43px; } }
+
+#progressBar {
+  width: 0%;
+  background: orange;
+  margin: 0;
+  height: .25em;
+  opacity: 0.9; }
 
 /*# sourceMappingURL=main.css.map */

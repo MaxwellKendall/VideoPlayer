@@ -1,9 +1,22 @@
-    .wrapper {
+* {
+    @include font-size($size);
+    @extend %text-style;
+        .wrapper {
+            width: 75%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            // @include media-query($tablet) {
+            //     width: 85%;
+            // }
+            // @include media-query($desktop) {
+            //     width: 95%;
+            // }
+                p {
+                    margin: 0;
+                    }
 
-            p {
-                // nested inside the h1,2 and body
-                text-align: left;
-                font-size: 15px;
-                }
-            
-        }
+            }
+
+}

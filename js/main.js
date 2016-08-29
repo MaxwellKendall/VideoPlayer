@@ -1,12 +1,12 @@
 
-
 // a. OBJECTS:
 
             var buttons = {
                 play: document.getElementById("play"),
                 volume: document.getElementById("volume"),
-                fScreen: document.getElementById("fscreen"),
-                currentTime: document.getElementById("currentTime")
+                fScreen: document.getElementById("fScreen"),
+                currentTime: document.getElementById("currentTime"),
+                videoDuration: document.getElementById("videoDuration")
             };
 
             var transcript = {
@@ -20,22 +20,17 @@
 
             var video = {
                 element: document.getElementsByTagName("video")[0],
-                progress: document.getElementById("videotrack"),
+                progress: document.getElementById("progressBar"),
                 controls: document.getElementById("controls"),
                 muted: false,
                 fullScreen: false,
                 isPlaying: false
-
             };
 
 // b. FUNCTIONS:
 
             // Progress Bar Increase
 
-            function setDuration() {
-                var progress = document.getElementById("progressBar");
-               progress.setAttribute('max', video.duration);
-           }
            function progressIncrease(){
                var progressBar = document.getElementById("progressBar");
                progressBar.value = video.element.currentTime;
@@ -63,21 +58,38 @@
                     }
             }
 
-            //  Volume On & Off
+            //  Volume On & Off & Volume Adjust
 
             function volumeOff(){
                 var vid = video.element;
                 var volumeButton = buttons.volume;
                 if (vid.muted){
-                    vid.volume = 1.0;
+                    vid.volume = .50;
+                    document.getElementById('volumeAdjust').value = "50";
                     volumeButton.style.background = 'url(icons/volume-on-icon.png) black no-repeat center';
                     vid.muted = false;
 
                 } else {
                         vid.volume = 0.0;
+                        document.getElementById('volumeAdjust').value = "0";
                         volumeButton.style.background = 'url(icons/volume-off-icon.png) black no-repeat center';
                         vid.muted = true;
                     }
+            }
+
+            function volumeAdjust(){
+                var vid = video.element;
+                var volumeButton = document.getElementById('volumeAdjust');
+                var x = volumeButton.value / 100;
+                vid.volume = x;
+                console.log(x);
+                if(vid.volume === 0){
+                    buttons.volume.style.background = "url(icons/volume-off-icon.png) black no-repeat center";
+                } else {
+                    buttons.volume.style.background = "url(icons/volume-on-icon.png) black no-repeat center";
+                }
+                console.log(x);
+        // Add the no volume background if set to 0.02 (this is the lowest value I observed)
             }
 
              // Highlight Transcript Function
@@ -95,33 +107,45 @@
                      var j = document.getElementById("10");
                      var k = document.getElementById("11");
                      var l = document.getElementById("12");
+                     var m = document.getElementById("13");
+                     var n = document.getElementById("14");
+                     var o = document.getElementById("15");
+                     var p = document.getElementById("16");
                      for (var i = 0; i < document.getElementsByTagName("span").length; i ++){
                          document.getElementsByTagName("span")[i].style.color = "black";
                      }
-                     if(video.element.currentTime < 5){
+                     if(video.element.currentTime < 4.13){
                          a.style.color = "orange";
-                     } else if (video.element.currentTime > 5 && video.element.currentTime < 10){
-                                                  b.style.color = "orange";
-                     } else if (video.element.currentTime > 10 && video.element.currentTime < 15){
-                                                  c.style.color = "orange";
-                     } else if (video.element.currentTime > 15 && video.element.currentTime < 20){
-                                                  d.style.color = "orange";
-                     } else if (video.element.currentTime > 20 && video.element.currentTime < 25){
-                                                  e.style.color = "orange";
-                     } else if (video.element.currentTime > 25 && video.element.currentTime < 30){
-                                                  f.style.color = "orange";
-                     } else if (video.element.currentTime > 30 && video.element.currentTime < 35){
-                                                  g.style.color = "orange";
-                     } else if (video.element.currentTime > 35 && video.element.currentTime < 40){
-                                                  h.style.color = "orange";
-                     } else if (video.element.currentTime > 40 && video.element.currentTime < 45){
-                                                  z.style.color = "orange";
-                     } else if (video.element.currentTime > 45 && video.element.currentTime < 50){
-                                                  j.style.color = "orange";
-                     } else if (video.element.currentTime > 50 && video.element.currentTime < 55){
+                     } else if (video.element.currentTime > 4.130 && video.element.currentTime < 7.535){
+                          b.style.color = "orange";
+                     } else if (video.element.currentTime > 7.535 && video.element.currentTime < 11.270){
+                          c.style.color = "orange";
+                     } else if (video.element.currentTime > 11.270 && video.element.currentTime < 13.960){
+                          d.style.color = "orange";
+                     } else if (video.element.currentTime > 13.960 && video.element.currentTime < 17.940){
+                          e.style.color = "orange";
+                     } else if (video.element.currentTime > 17.940 && video.element.currentTime < 22.370){
+                          f.style.color = "orange";
+                     } else if (video.element.currentTime > 22.370 && video.element.currentTime < 26.880){
+                          g.style.color = "orange";
+                     } else if (video.element.currentTime > 26.880 && video.element.currentTime < 30.920){
+                          h.style.color = "orange";
+                     } else if (video.element.currentTime > 30.920 && video.element.currentTime < 34.730){
+                          z.style.color = "orange";
+                     } else if (video.element.currentTime > 34.730 && video.element.currentTime < 39.430){
+                          j.style.color = "orange";
+                     } else if (video.element.currentTime > 39.430 && video.element.currentTime < 41.190){
                          k.style.color = "orange";
-                     } else if (video.element.currentTime > 55 && video.element.currentTime < 60){
+                     } else if (video.element.currentTime > 41.190 && video.element.currentTime < 46.300){
                          l.style.color = "orange";
+                     }  else if (video.element.currentTime > 46.300 && video.element.currentTime < 49.270){
+                         m.style.color = "orange";
+                     } else if (video.element.currentTime > 49.270 && video.element.currentTime < 53.760){
+                         n.style.color = "orange";
+                     } else if (video.element.currentTime > 53.760 && video.element.currentTime < 57.780){
+                         o.style.color = "orange";
+                     }else if (video.element.currentTime > 57.780 && video.element.currentTime < 60){
+                         p.style.color = "orange";
                      }
                  }
 
@@ -146,8 +170,10 @@
                 function hoverOn(){
                         var controls = document.getElementById("controls");
                             controls.style.visibility = "visible";
+                            // document.getElementById('progressBarContainer').style.bottom = '43px';
                     };
                 function hoverOff(){
+                    // document.getElementById('progressBarContainer').style.bottom = '19px';
                         var controls = document.getElementById("controls");
                         controls.style.visibility = "hidden";
                     };
@@ -162,32 +188,43 @@
             }
 
             function displayCurrentTime(){
+                document.getElementById('timeSeperator').innerHTML = '/';
                 var x = video.element.currentTime;
                 if(x < 10){
                 buttons.currentTime.innerHTML = "00:0" + parseInt(x);
-            }   else if (x >= 10){
+                } else if (x >= 10){
                 buttons.currentTime.innerHTML = "00:" + parseInt(x);
-            } else if (x >= 60 && x < 70){
+                } else if (x >= 60 && x < 70){
                 buttons.currentTime.innerHTML = "01:0" + parseInt(x);
-            } else if (x >= 70){
+                } else if (x >= 70){
                 buttons.currentTime.innerHTML = "01:" + parseInt(x);
             }
-            }
+        }
+
+            function setDuration() {
+                console.log('dasdfasdf');
+                var duration = parseInt(video.element.duration);
+                var time = "00:" + duration;
+                buttons.videoDuration.innerText = time;
+                   }
 
 // c. EVENT LISTENERS:
 
     // Button Events:
             buttons.play.addEventListener("click", playVideo, false)
-            buttons.volume.addEventListener("click", volumeOff, false)
+            buttons.volume.addEventListener('click', volumeOff, false)
+            document.getElementById("volumeAdjust").addEventListener("click", volumeAdjust, false)
             buttons.fScreen.addEventListener("click", fullScreen, false)
     // Video Events
             video.element.addEventListener("timeupdate", progressIncrease, false);
             video.element.addEventListener("timeupdate", highlightTranscript, false);
             video.element.addEventListener("ended", videoOver, false);
-            video.element.addEventListener("loadmetadata", setDuration, false);
-            video.element.addEventListener("mouseover", hoverOn, false);
-            video.element.addEventListener("mouseleave", hoverOff, false);
-            video.controls.addEventListener("mouseover", hoverOn, false);
-            video.controls.addEventListener("mouseleave", hoverOff, false);
-            video.progress.addEventListener('click', seek, false);
+            document.getElementById('xyz').addEventListener("mouseover", hoverOn, false);
+            document.getElementById('xyz').addEventListener("mouseleave", hoverOff, false);
+            // video.controls.addEventListener("mouseover", hoverOn, false);
+            // video.controls.addEventListener("mouseleave", hoverOff, false);
+            document.getElementById('progressBarContainer').addEventListener('click', seek, false);
             video.element.addEventListener('timeupdate', displayCurrentTime, false);
+
+    // Document Events:
+            document.getElementById('xyz').addEventListener('mouseover', setDuration, false);
