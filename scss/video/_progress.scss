@@ -8,7 +8,7 @@
     margin: auto;
     cursor: pointer;
     position: relative;
-    bottom: 19px;
+    bottom: 43px;
     @include media-query($tablet) {
         position: relative;
     }
@@ -17,7 +17,7 @@
         #progressBarContainer {
             @include media-query($tablet) {
             bottom: 43px;
-            }
+
         }
     }
 
@@ -28,3 +28,4 @@
         height: .25em;
         opacity: .9
     }
+}

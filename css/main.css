@@ -13,13 +13,21 @@
   text-align: left; }
 
 * p {
-  font-size: 12px; }
+  font-size: 9px; }
+  @media (min-width: 768px) {
+    * p {
+      font-size: 13.5px; } }
+* span {
+  font-size: 9px; }
+  @media (min-width: 768px) {
+    * span {
+      font-size: 13.5px; } }
 * h1 {
-  font-size: 36px; }
+  font-size: 27px; }
 * h2 {
-  font-size: 24px; }
-* h3 {
   font-size: 18px; }
+* h3 {
+  font-size: 13.5px; }
 * .wrapper {
   width: 75%;
   margin: auto;
@@ -28,6 +36,11 @@
   flex-direction: column; }
   * .wrapper p {
     margin: 0; }
+* .footer {
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+  font-size: 9px; }
 
 .video {
   width: 100%; }
@@ -37,7 +50,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  position: relative; }
+  position: relative;
+  bottom: 40px; }
   @media (min-width: 768px) {
     #controls {
       bottom: 34px; } }
@@ -54,9 +68,14 @@
     #controls button {
       width: 30px;
       height: 30px; } }
+  #controls span {
+    color: white; }
   #controls .time {
     margin-right: auto;
     width: 200px; }
+    @media (min-width: 768px) {
+      #controls .time #videoDuration {
+        margin-right: auto; } }
   #controls #play {
     background: url(../icons/play-icon.png) black no-repeat center;
     margin: 0 1em 0 0; }
@@ -71,11 +90,6 @@
       background: url(../icons/volume-on-icon.png) black no-repeat center; }
     #controls .volume #volumeAdjust {
       width: 50%; }
-  #controls .time {
-    margin-right: auto; }
-    @media (min-width: 768px) {
-      #controls .time #videoDuration {
-        margin-right: auto; } }
 
 #progressBarContainer {
   height: .25em;
@@ -86,7 +100,7 @@
   margin: auto;
   cursor: pointer;
   position: relative;
-  bottom: 19px; }
+  bottom: 43px; }
   @media (min-width: 768px) {
     #progressBarContainer {
       position: relative; } }
@@ -94,8 +108,7 @@
 @media (min-width: 768px) {
   #xyz:hover #progressBarContainer {
     bottom: 43px; } }
-
-#progressBar {
+#xyz:hover #progressBar {
   width: 0%;
   background: orange;
   margin: 0;

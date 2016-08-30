@@ -189,6 +189,8 @@
 
             function displayCurrentTime(){
                 document.getElementById('timeSeperator').innerHTML = '/';
+                document.getElementById('timeSeperator').style.color = 'white';
+
                 var x = video.element.currentTime;
                 if(x < 10){
                 buttons.currentTime.innerHTML = "00:0" + parseInt(x);
@@ -198,6 +200,8 @@
                 buttons.currentTime.innerHTML = "01:0" + parseInt(x);
                 } else if (x >= 70){
                 buttons.currentTime.innerHTML = "01:" + parseInt(x);
+                bottons.currentTime.style.color = "white";
+
             }
         }
 
@@ -206,6 +210,7 @@
                 var duration = parseInt(video.element.duration);
                 var time = "00:" + duration;
                 buttons.videoDuration.innerText = time;
+                bottons.videoDuration.style.color = "white";
                    }
 
 // c. EVENT LISTENERS:

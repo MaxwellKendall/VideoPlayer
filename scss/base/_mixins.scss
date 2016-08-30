@@ -7,7 +7,18 @@
 @mixin font-size($fontsize) {
     p {
         font-size: $fontsize;
+        @include media-query($tablet) {
+        font-size: $fontsize * 1.5
+        }
     }
+
+    span {
+        font-size: $fontsize;
+        @include media-query($tablet) {
+            font-size: $fontsize * 1.5
+        }
+    }
+
     h1 {
         font-size: $fontsize * 3;
     }

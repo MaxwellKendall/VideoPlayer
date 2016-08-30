@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    bottom: 40px;
     @include media-query($tablet) {
         bottom: 34px;
     }
@@ -25,9 +26,18 @@
             }
         }
 
+        span {
+            color: white;
+        }
+
         .time {
             margin-right: auto;
             width: 200px;
+            #videoDuration {
+                @include media-query($tablet) {
+                margin-right: auto;
+                }
+            }
         }
             #play {
                 //applies to button
@@ -54,14 +64,5 @@
         #volumeAdjust{
             width: 50%;
         }
-    }
-        .time {
-            margin-right: auto;
-            #videoDuration {
-                @include media-query($tablet) {
-                margin-right: auto;
-            }
-        }
-
     }
 }
