@@ -8,19 +8,7 @@
     margin: auto;
     cursor: pointer;
     position: relative;
-    bottom: 43px;
-    @include media-query($tablet) {
-        position: relative;
-    }
-}
-    #xyz:hover {
-        #progressBarContainer {
-            @include media-query($tablet) {
-            bottom: 43px;
-
-        }
-    }
-
+    bottom: 19px;
     #progressBar {
         width: 0%;
         background: orange;

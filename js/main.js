@@ -95,24 +95,25 @@
              // Highlight Transcript Function
 
                  function highlightTranscript (){
-                     var a = document.getElementById("1");
-                     var b = document.getElementById("2");
-                     var c = document.getElementById("3");
-                     var d = document.getElementById("4");
-                     var e = document.getElementById("5");
-                     var f = document.getElementById("6");
-                     var g = document.getElementById("7");
-                     var h = document.getElementById("8");
-                     var z = document.getElementById("9");
-                     var j = document.getElementById("10");
-                     var k = document.getElementById("11");
-                     var l = document.getElementById("12");
-                     var m = document.getElementById("13");
-                     var n = document.getElementById("14");
-                     var o = document.getElementById("15");
-                     var p = document.getElementById("16");
-                     for (var i = 0; i < document.getElementsByTagName("span").length; i ++){
-                         document.getElementsByTagName("span")[i].style.color = "black";
+                     var a = document.getElementById("0");
+                     var b = document.getElementById("1");
+                     var c = document.getElementById("2");
+                     var d = document.getElementById("3");
+                     var e = document.getElementById("4");
+                     var f = document.getElementById("5");
+                     var g = document.getElementById("6");
+                     var h = document.getElementById("7");
+                     var z = document.getElementById("8");
+                     var j = document.getElementById("9");
+                     var k = document.getElementById("10");
+                     var l = document.getElementById("11");
+                     var m = document.getElementById("12");
+                     var n = document.getElementById("13");
+                     var o = document.getElementById("14");
+                     var p = document.getElementById("15");
+                     for (var i = 0; i < document.getElementById("caption").children.length; i ++){
+                         var x = document.getElementById("caption").children;
+                         x[i].style.color = "black";
                      }
                      if(video.element.currentTime < 4.13){
                          a.style.color = "orange";
@@ -170,10 +171,10 @@
                 function hoverOn(){
                         var controls = document.getElementById("controls");
                             controls.style.visibility = "visible";
-                            // document.getElementById('progressBarContainer').style.bottom = '43px';
+                            document.getElementById('progressBarContainer').style.bottom = '43px';
                     };
                 function hoverOff(){
-                    // document.getElementById('progressBarContainer').style.bottom = '19px';
+                    document.getElementById('progressBarContainer').style.bottom = '19px';
                         var controls = document.getElementById("controls");
                         controls.style.visibility = "hidden";
                     };
@@ -200,7 +201,7 @@
                 buttons.currentTime.innerHTML = "01:0" + parseInt(x);
                 } else if (x >= 70){
                 buttons.currentTime.innerHTML = "01:" + parseInt(x);
-                bottons.currentTime.style.color = "white";
+                buttons.currentTime.style.color = "white";
 
             }
         }
@@ -210,7 +211,7 @@
                 var duration = parseInt(video.element.duration);
                 var time = "00:" + duration;
                 buttons.videoDuration.innerText = time;
-                bottons.videoDuration.style.color = "white";
+                buttons.videoDuration.style.color = "white";
                    }
 
 // c. EVENT LISTENERS:

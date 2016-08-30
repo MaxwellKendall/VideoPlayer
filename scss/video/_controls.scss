@@ -4,33 +4,30 @@
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: 40px;
+    bottom: 41px;
+    background: rgba(0, 0, 0, 0.7);
     @include media-query($tablet) {
-        bottom: 34px;
+        // bottom: 34px;
     }
     @include media-query($desktop) {
-        bottom: 39px;
+        // bottom: 40px;
     }
         button {
             //code for each button on video control
             @extend %button;
             @include media-query($tablet) {
-                width: 25px;
-                height: 25px;
+                // width: 25px;
+                // height: 25px;
                 bottom: 39px;
                 justify-content: center;
             }
             @include media-query($desktop) {
-                width: 30px;
-                height: 30px;
+                // width: 30px;
+                // height: 30px;
             }
         }
-
-        span {
-            color: white;
-        }
-
         .time {
+            color: white;
             margin-right: auto;
             width: 200px;
             #videoDuration {

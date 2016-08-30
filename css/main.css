@@ -1,7 +1,6 @@
 #controls button {
   width: 35px;
   height: 30px;
-  border: 1px solid black;
   align-self: center;
   cursor: pointer;
   padding: 0 .5em;
@@ -51,26 +50,14 @@
   display: flex;
   justify-content: center;
   position: relative;
-  bottom: 40px; }
-  @media (min-width: 768px) {
-    #controls {
-      bottom: 34px; } }
-  @media (min-width: 1024px) {
-    #controls {
-      bottom: 39px; } }
+  bottom: 41px;
+  background: rgba(0, 0, 0, 0.7); }
   @media (min-width: 768px) {
     #controls button {
-      width: 25px;
-      height: 25px;
       bottom: 39px;
       justify-content: center; } }
-  @media (min-width: 1024px) {
-    #controls button {
-      width: 30px;
-      height: 30px; } }
-  #controls span {
-    color: white; }
   #controls .time {
+    color: white;
     margin-right: auto;
     width: 200px; }
     @media (min-width: 768px) {
@@ -100,19 +87,12 @@
   margin: auto;
   cursor: pointer;
   position: relative;
-  bottom: 43px; }
-  @media (min-width: 768px) {
-    #progressBarContainer {
-      position: relative; } }
-
-@media (min-width: 768px) {
-  #xyz:hover #progressBarContainer {
-    bottom: 43px; } }
-#xyz:hover #progressBar {
-  width: 0%;
-  background: orange;
-  margin: 0;
-  height: .25em;
-  opacity: 0.9; }
+  bottom: 19px; }
+  #progressBarContainer #progressBar {
+    width: 0%;
+    background: orange;
+    margin: 0;
+    height: .25em;
+    opacity: 0.9; }
 
 /*# sourceMappingURL=main.css.map */
