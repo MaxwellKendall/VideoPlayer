@@ -1,3 +1,14 @@
+// Hello.
+//
+// This is JSHint, a tool that helps to detect errors and potential
+// problems in your JavaScript code.
+//
+// To start, simply enter some JavaScript anywhere on this page. Your
+// report will appear on the right side.
+//
+// Additionally, you can toggle specific options in the Configure
+// menu.
+
 
 // a. OBJECTS:
 
@@ -35,14 +46,14 @@
                var progressBar = document.getElementById("progressBar");
                progressBar.value = video.element.currentTime;
                progressBar.style.width = Math.floor((video.element.currentTime / video.element.duration) * 100) + '%';
-            };
+            }
 
         // Seek function
 
         function seek(e) {
            var pos = (e.pageX  - this.offsetLeft) / this.offsetWidth;
            video.element.currentTime = pos * video.element.duration;
-       };
+       }
 
             // Play Button
 
@@ -64,7 +75,7 @@
                 var vid = video.element;
                 var volumeButton = buttons.volume;
                 if (vid.muted){
-                    vid.volume = .50;
+                    vid.volume = 0.50;
                     document.getElementById('volumeAdjust').value = "50";
                     volumeButton.style.background = 'url(icons/volume-on-icon.png) black no-repeat center';
                     vid.muted = false;
@@ -172,12 +183,12 @@
                         var controls = document.getElementById("controls");
                             controls.style.visibility = "visible";
                             document.getElementById('progressBarContainer').style.bottom = '43px';
-                    };
+                    }
                 function hoverOff(){
                     document.getElementById('progressBarContainer').style.bottom = '19px';
                         var controls = document.getElementById("controls");
                         controls.style.visibility = "hidden";
-                    };
+                    }
 
         // Ended Video function
 
@@ -217,10 +228,10 @@
 // c. EVENT LISTENERS:
 
     // Button Events:
-            buttons.play.addEventListener("click", playVideo, false)
-            buttons.volume.addEventListener('click', volumeOff, false)
-            document.getElementById("volumeAdjust").addEventListener("click", volumeAdjust, false)
-            buttons.fScreen.addEventListener("click", fullScreen, false)
+            buttons.play.addEventListener("click", playVideo, false);
+            buttons.volume.addEventListener('click', volumeOff, false);
+            document.getElementById("volumeAdjust").addEventListener("click", volumeAdjust, false);
+            buttons.fScreen.addEventListener("click", fullScreen, false);
     // Video Events
             video.element.addEventListener("timeupdate", progressIncrease, false);
             video.element.addEventListener("timeupdate", highlightTranscript, false);
